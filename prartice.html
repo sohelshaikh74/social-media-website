@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .square {
-            width: 200px;
-            /* You can set any width */
-            aspect-ratio: 2 / 4;
-            /* height: 200px; */
-            /* This will make the height equal to the width */
-            background-color: lightblue;
+        .image-container {
+            width: 2.7rem;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div class="square"></div>
+    <div class="image-container">
+        <img src="/images/profile-1.jpg" alt="">
+    </div>
 </body>
 
 </html>

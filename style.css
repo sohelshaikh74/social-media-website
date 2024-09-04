@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root{
-    --color-dark:hsl(252, 30%, 17%);
+    --color-white:hsl(252, 30%, 100%);
     --color-light:hsl(252, 30%, 95%);
     --color-gray:hsl(252, 15%, 65%);
     --color-primary:hsl(252, 75%, 60%);
@@ -9,6 +9,12 @@
     --color-danger:hsl(0, 95%, 65%);
     --color-dark:hsl(252, 30%, 17%);
     --color-blackt:hsl(252, 30%, 10%);
+
+    --border-radius:2rem;
+    --card-border-radius:1rem;
+    --btn-padding:0.6rem 1rem;
+    --search-padding:0.6rem 1rem;
+    --card-padding: 1rem;
 }
 *,*::before,*::after{
     margin: 0;
@@ -34,4 +40,53 @@ body{
 .profile-picture{
     width: 2.7rem;
     aspect-ratio: 1/1;  /* height and widht will be same means height also 2.7rem X 16px = 40px*/
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{   /* for all image*/
+ display: block;
+ width: 100%;
+}
+
+.btn{
+display: inline-block;
+padding: var(--btn-padding);
+font-weight: 500;
+border-radius: var(--border-radius);
+cursor: pointer;
+transition: all 300ms ease;
+font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+.text-muted{
+    color: var(--color-gray);
+}
+
+
+/* ================== NAVBAR ====================== */
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content:  ;
 }
