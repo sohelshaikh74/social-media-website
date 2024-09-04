@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --color-dark:hsl(252, 30%, 17%);
+    --color-light:hsl(252, 30%, 95%);
+    --color-gray:hsl(252, 15%, 65%);
+    --color-primary:hsl(252, 75%, 60%);
+    --color-secondary:hsl(252, 100%, 90%);
+    --color-success:hsl(120, 95%, 65%);
+    --color-danger:hsl(0, 95%, 65%);
+    --color-dark:hsl(252, 30%, 17%);
+    --color-blackt:hsl(252, 30%, 10%);
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+    list-style: none;
+    border: none;
+}
+body{
+    font-family: "Outfit", sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow: hidden;
+}
+
+/* general styles */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.profile-picture{
+    width: 2.7rem;
+    aspect-ratio: 1/1;  /* height and widht will be same means height also 2.7rem X 16px = 40px*/
+}
