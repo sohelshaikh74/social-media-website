@@ -63,7 +63,7 @@
                         <span><i class="fa-solid fa-compass"></i></span>
                         <h3>Explore</h3>
                     </a>
-                    <a class="menu-item">
+                    <a class="menu-item" id="notifications">
                         <span><i class="fa-solid fa-bell"><small class="notification-count"> 9+ </small></i></span>
                         <h3>Notification</h3>
                         <!-- ======== NOTIFICATION POPUP Begin========= -->
@@ -124,7 +124,7 @@
                         </div>
                         <!-- ======== NOTIFICATION POPUP End========= -->
                     </a>
-                    <a class="menu-item" id="messages-notifications">
+                    <a class="menu-item" id="messages-notification">
                         <span><i class="fa-solid fa-message"><small class="notification-count"> 6 </small></i></span>
                         <h3>Message</h3>
                     </a>
@@ -774,21 +774,21 @@
     <div class="customize-theme">
         <div class="card">
             <h2>Customize you view</h2>
-            <p>Manage your font size,co
-                <!-- ===============FONT SIZE=========== -->
+            <p class="text-muted">Manage your font size,color and background</p>
+            <!-- ===============FONT SIZE=========== -->
             <div class="font-size">
-                <h4>Font Size
-                    <div>
-                        <h6>Aa</h6>
-                        <div class="choose-size">
-                            <span class="font-size-1"></span>
-                            <span class="font-size-2"></span>
-                            <span class="font-size-3"></span>
-                            <span class="font-size-4"></span>
-                            <span class="font-size-5"></span>
-                        </div>
-                        <h3>Aa</h3>
+                <h4>Font Size </h4>
+                <div>
+                    <h6>Aa</h6>
+                    <div class="choose-size">
+                        <span class="font-size-1"></span>
+                        <span class="font-size-2 active"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-5"></span>
                     </div>
+                    <h3>Aa</h3>
+                </div>
             </div>
 
             <!-- **********PRIMARY COLOR*************** -->
@@ -797,7 +797,7 @@
                 <div class="choose-color">
                     <span class="color-1 active"></span>
                     <span class="color-2 "></span>
-                    <span class="color-3 "></span>
+                    <span class="color-3"></span>
                     <span class="color-4 "></span>
                     <span class="color-5 "></span>
                 </div>
@@ -805,11 +805,26 @@
 
             <!-- ****BACKGROUND COLOR****** -->
             <div class="background">
-
+                <h4>Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active">
+                        <span></span>
+                        <h5 for="bg-1">Light</h5>
+                    </div>
+                    <div class="bg-2">
+                        <span></span>
+                        <h5 for="bg-2">Dim</h5>
+                    </div>
+                    <div class="bg-3">
+                        <span></span>
+                        <h5 for="bg-3">Lights Out</h5>
+                    </div>
+                </div>
             </div>
 
         </div>
     </div>
+    <!-- ===========END OF CUSTOMIZATION THEME -->
 
     <script src="index.js"></script>
 </body>
