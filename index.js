@@ -7,6 +7,11 @@ const message = document.querySelectorAll('.message')
 
 const messageSerach = document.querySelector('#message-serch')
 
+// theme
+const theme = document.querySelector('#theme')
+const themeModal = document.querySelector('.customize-theme')
+const fontSize = document.querySelectorAll('.choose-size span')
+var root = document.querySelector(':root')
 
 // REMOVE ACTIVE CLASS FROM ALL MENU ITEMS
 const changeActiveItem = ()=>{
@@ -53,7 +58,6 @@ const searchMessage =()=>{
 // search chat
 messageSerach.addEventListener('keyup',searchMessage)
 
-
 messageNotification.addEventListener('click',()=>{
     messages.style.boxShadow = '0 0 1rem var(--color-primary)'
     messageNotification.querySelector('.notification-count').style.display='none'
@@ -61,6 +65,74 @@ messageNotification.addEventListener('click',()=>{
         messages.style.boxShadow = "none"
     },2000)
 })
+
+
+// THEME/DISPLAY CUSTOMIZATION
+
+// open modal
+const openThemeModal =()=>{
+    themeModal.style.display="grid";
+}
+
+// close modal
+const closeThemeModal =(e)=>{
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display="none"
+    }
+}
+themeModal.addEventListener('click',closeThemeModal)
+
+theme.addEventListener('click',openThemeModal)
+
+
+
+// ================== FONTS ===================
+// remove active class from span or font size selctor
+const removeSizeSelector =()=>{
+    fontSize.forEach((size)=>{
+          size.classList.remove('active')
+    })
+}
+fontSize.forEach((size)=>{
+    size.addEventListener('click',()=>{
+         removeSizeSelector()
+         let fontSize;
+         size.classList.toggle('active')
+        if(size.classList.contains('font-size-1')){
+            fontSize = "10px"
+            root.style.setProperty(' --sticky-top-left','5.4')
+            root.style.setProperty(' --sticky-top-right','5.4')
+        }
+        else if(size.classList.contains('font-size-2')){
+            fontSize = "13px"
+            root.style.setProperty(' --sticky-top-left','5.4')
+            root.style.setProperty(' --sticky-top-right','-7rem')
+        }
+        else if(size.classList.contains('font-size-3')){
+            fontSize = "16px"
+            root.style.setProperty(' --sticky-top-left','-2rem')
+            root.style.setProperty(' --sticky-top-right','-17rem')
+        }
+        else if(size.classList.contains('font-size-4')){
+            fontSize = "19px"
+            root.style.setProperty(' --sticky-top-left','-5rem')
+            root.style.setProperty(' --sticky-top-right','-25rem')
+        }
+        else if(size.classList.contains('font-size-5')){
+            fontSize = "22px"
+            root.style.setProperty(' --sticky-top-left','-10rem')
+            root.style.setProperty(' --sticky-top-right','5rem')
+        }
+        // chnage font size of the root html
+        document.querySelector('html').style.fontSize =fontSize
+     })
+
+})
+
+
+
+
+
 
 
 

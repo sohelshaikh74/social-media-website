@@ -483,7 +483,7 @@ margin-bottom: 1rem;
     left: 0;
     z-index: 100;
     text-align: center;
-    display: grid;
+    /* display: grid; */
     place-items: center;
     font-size: 0.9rem;
     display: none;
@@ -493,6 +493,7 @@ margin-bottom: 1rem;
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* -----------------font-size------------------- */
@@ -661,5 +662,8 @@ justify-content: space-between;
     }
     main .container .right{
         display: none;
+    }
+    .customize-theme .card{
+      width: 90vw;
     }
 }
