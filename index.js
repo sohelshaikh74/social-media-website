@@ -10,9 +10,13 @@ const messageSerach = document.querySelector('#message-serch')
 // theme
 const theme = document.querySelector('#theme')
 const themeModal = document.querySelector('.customize-theme')
-const fontSize = document.querySelectorAll('.choose-size span')
+const fontSizes = document.querySelectorAll('.choose-size span')
 var root = document.querySelector(':root')
 const colorPalette = document.querySelectorAll('.choose-color span')
+const Bg1=document.querySelector('.bg-1')
+const Bg2=document.querySelector('.bg-2')
+const Bg3=document.querySelector('.bg-3')
+
 
 // REMOVE ACTIVE CLASS FROM ALL MENU ITEMS
 const changeActiveItem = ()=>{
@@ -94,11 +98,11 @@ const removeSizeSelector =()=>{
           size.classList.remove('active')
     })
 }
-fontSize.forEach((size)=>{
-    size.addEventListener('click',()=>{
-         removeSizeSelector()
+fontSizes.forEach((size)=>{
+    // size.addEventListener('click',()=>{
+        //  removeSizeSelector()
          let fontSize;
-         size.classList.toggle('active')
+        //  size.classList.toggle('active')
         if(size.classList.contains('font-size-1')){
             fontSize = "10px"
             root.style.setProperty(' --sticky-top-left','5.4')
@@ -124,9 +128,9 @@ fontSize.forEach((size)=>{
             root.style.setProperty(' --sticky-top-left','-10rem')
             root.style.setProperty(' --sticky-top-right','5rem')
         }
-        // chnage font size of the root html
+        // chnage font size of the root html element
         document.querySelector('html').style.fontSize =fontSize
-     })
+    //  })
 
 })
 
@@ -164,9 +168,57 @@ colorPalette.forEach((color)=>{
 
 
 
+// theme background values
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+// change background color
+const changeBG=()=>{
+    root.style.setProperty('--light--color-lightness',lightColorLightness)
+    root.style.setProperty('--white-color-lightness',whiteColorLightness)
+    root.style.setProperty('--dark--color-lightness',darkColorLightness)
+}
+
+// change background color
+Bg1.addEventListener('click',()=>{
+    // add active class
+    Bg1.classList.add('active')
+    // remove active class from the others
+    Bg2.classList.remove('active')
+    Bg3.classList.remove('active')
+    // remove customized changes from local storage
+    window.location.reload()
+})
+
+Bg2.addEventListener('click',()=>{
+    darkColorLightness = "95%";
+    whiteColorLightness = "20%";
+    lightColorLightness = "15%";
+
+    // add active class
+    Bg2.classList.add('active')
+    // remove active class from the others
+    Bg1.classList.remove('active')
+    Bg3.classList.remove('active')
+    changeBG()
+})
+Bg3.addEventListener('click',()=>{
+    darkColorLightness = "95%";
+    whiteColorLightness = "10%";
+    lightColorLightness = "0%";
+
+    // add active class
+    Bg3.classList.add('active')
+    // remove active class from the others
+    Bg1.classList.remove('active')
+    Bg3.classList.remove('active')
+    changeBG()
+})
 
 
 
+// END
 
 // // SIDEBAR
 // const menuItems = document.querySelectorAll('.menu-item')
