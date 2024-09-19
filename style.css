@@ -8,9 +8,10 @@
 
     --color-white:hsl(252, 30%, var(--white-color-lightness));
     --color-light:hsl(252, 30%, var(--light--color-lightness));
-    /* --color-gray:hsl(252, 15%, 65%); */
-    --color-gray:hsl(var(--primary-color-hue),15%,65%)
-    --color-primary:hsl(var(--primary-color-hue), 75%, 60%);
+    --color-gray:hsl(252, 15%, 65%);
+    /* --color-gray:hsl(var(--primary-color-hue),15%,65%) */
+    /* --color-primary:hsl(var(--primary-color-hue), 75%, 60%); */
+    --color-primary:hsl(252,75%,60%);
     --color-secondary:hsl(252, 100%, 90%);
     --color-success:hsl(120, 95%, 65%);
     --color-danger:hsl(0, 95%, 65%);
@@ -385,7 +386,7 @@ main .container  .right{
     height: max-content;
     position: sticky;
     top: var(--sticky-top-right);
-    /* bottom: 0; */
+    bottom: 0;
 }
 .right .messages{
     background: var(--color-white);
@@ -532,6 +533,7 @@ border-radius: var(--card-border-radius);
     cursor: pointer;
 }
 .customize-theme .choose-size span.active{
+    /* background: var(--color-primary); */
     background: var(--color-primary);
 }
 
