@@ -1,9 +1,9 @@
 // SIDEBAR 
 const menuItem = document.querySelectorAll('.menu-item')
-
 const messageNotification=document.querySelector('#messages-notification') 
 const messages = document.querySelector('.messages')
 const message = document.querySelectorAll('.message')
+
 
 const messageSerach = document.querySelector('#message-serch')
 
@@ -22,7 +22,6 @@ const Bg3=document.querySelector('.bg-3')
 const changeActiveItem = ()=>{
     menuItem.forEach(item=>item.classList.remove('active'))
 }
-
 
 
 // console.log(menuItem);
@@ -171,8 +170,6 @@ colorPalette.forEach((color)=>{
 })
 
 
-
-
 // theme background values
 let lightColorLightness;
 let whiteColorLightness;
@@ -222,24 +219,6 @@ Bg3.addEventListener('click',()=>{
 })
 
 
-
 // END
 
-// // SIDEBAR
-// const menuItems = document.querySelectorAll('.menu-item')
-// console.log(menuItems);
 
-
-
-
-
-// // REMOVE THE ACTIVE CLASS 
-// const changerActiveItem = ()=>{
-//    menuItems.forEach(item=>item.classList.remove('active'))
-// }
-
-// menuItems.forEach(item=>item.addEventListener('click',()=>{
-
-//     changerActiveItem()
-//     item.classList.add('active')
-// }))
